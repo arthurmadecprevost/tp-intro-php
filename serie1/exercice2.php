@@ -35,7 +35,7 @@
         <table class="table table-striped">
           <thead>
             <tr>
-              <th scope="col">Numéro du mois</th>
+              <th scope="col">N° du mois</th>
               <th scope="col">Mois</th>
               <th scope="col">Nombre de jours</th>
               <th scope="col">Année en cours</th>
