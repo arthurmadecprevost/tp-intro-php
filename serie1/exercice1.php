@@ -29,8 +29,53 @@
             <div class="col-sm">
             </div>
         </div>
-    </div>
-
+        
+        <table class="table">
+            <thead>
+                <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Premier ?</th>
+                <th scope="col">Pair ou impair ?</th>
+                </tr>
+            </thead>
+<?php     
+          for($i = 1;$i < 11;$i++)
+          {
+              if($i % 2 == 0)
+              {
+                  $pair_impair = 'pair';
+              }
+              else
+              {
+                  $pair_impair = 'impair';
+              }
+              $nbDiv = 0;//Et on compte le nombre de diviseur    
+              for($j=1;$j<=$i;$j++){
+                  if($i%$j==0){
+                      $nbDiv++;            
+                  }
+              }
+              if($nbDiv == 2)
+              {
+                  $premier = 'Oui';
+              }   
+              else
+              {
+                  $premier = 'Non';
+              }
+?>
+              <tbody>
+                  <tr>
+                  <td><?= $i ?></td>
+                  <td><?= $premier ?></td>
+                  <td><?= $pair_impair ?></td>
+                  </tr>
+              </tbody>
+<?php
+}
+?>
+        </table>
+        </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 
   </body>
