@@ -11,7 +11,7 @@
                 Série 1
             </a>
             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                <li><a class="dropdown-item" href="http://localhost/serie1/exercice1.php">Exercice 1</a></li>
+                <li><a class="dropdown-item" href="../serie1/exercice1.php">Exercice 1</a></li>
                 <li><a class="dropdown-item" href="http://localhost/serie1/exercice2.php">Exercice 2</a></li>
                 <li><a class="dropdown-item" href="http://localhost/serie1/exercice3.php">Exercice 3</a></li>
                 <li><a class="dropdown-item" href="http://localhost/serie1/exercice4.php">Exercice 4</a></li>
