@@ -1,5 +1,5 @@
 <?php 
-    $URL_base = "http://localhost";
+    $URL_base = "http://localhost/intro_php/tp-intro-php";
 ?>    
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
