@@ -49,7 +49,7 @@
               $monthName = $dateObj->format('F'); // Mois
               $number = cal_days_in_month(CAL_GREGORIAN, $i, $currentYear); // 31
               echo "<tr>
-              <td >$i</td>
+              <td>$i</td>
               <td>$monthName</td>
               <th scope=\"row\">$number</th>
               <td>$currentYear</td>
