@@ -29,7 +29,7 @@
             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                 <li><a class="dropdown-item" href="#">Exercice 1</a></li>
                 <li><a class="dropdown-item" href="<?= $URL_base ?>/serie2/exercice2.php">Exercice 2</a></li>
-                <li><a class="dropdown-item" href="#">Exercice 3</a></li>
+                <li><a class="dropdown-item" href="<?= $URL_base ?>/serie2/exercice3.php">Exercice 3</a></li>
                 <li><a class="dropdown-item" href="#">Exercice 4</a></li>
             </ul>
             </li>
