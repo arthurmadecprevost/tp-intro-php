@@ -30,14 +30,15 @@
             </div>
         </div>
         
-        <table class="table">
+        <table class="table table-striped">
             <thead>
                 <tr>
-                <th scope="col">Nombre</th>
-                <th scope="col">Premier ?</th>
-                <th scope="col">Pair ou impair ?</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Premier ?</th>
+                    <th scope="col">Pair ou impair ?</th>
                 </tr>
             </thead>
+            <tbody>
 <?php     
           for($i = 1;$i < 11;$i++)
           {
@@ -63,19 +64,18 @@
               {
                   $premier = 'Non';
               }
-?>
-              <tbody>
-                  <tr>
-                  <td><?= $i ?></td>
-                  <td><?= $premier ?></td>
-                  <td><?= $pair_impair ?></td>
-                  </tr>
-              </tbody>
+?>             
+                <tr>
+                    <td><?= $i ?></td>
+                    <td><?= $premier ?></td>
+                    <td><?= $pair_impair ?></td>
+                </tr> 
 <?php
 }
 ?>
+            </tbody>
         </table>
-        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 
   </body>
