@@ -50,9 +50,10 @@
                     {
                       array_push($mines, random_int(0,$nbCases));
                     }
-                    echo("Tableau des emplacements des mines:<br>");
+                    echo("<div class=\"alert alert-primary\" role=\"alert\">
+                    Tableau des emplacements des mines:<br>");
                     print_r($mines);
-                    echo("<br>");
+                    echo("</div>");
 
                     for($j = 1; $j <= $nbCases; $j++){
                       if(is_int($j/$nbColonne+1)){
