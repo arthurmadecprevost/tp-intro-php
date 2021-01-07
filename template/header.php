@@ -1,6 +1,6 @@
 <?php 
-    //$URL_base = "http://localhost/intro_php/tp-intro-php";
-    $URL_base = "http://localhost";
+    $URL_base = "http://localhost/intro_php/tp-intro-php";
+    //$URL_base = "http://localhost";
 
 ?>    
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -28,7 +28,7 @@
             </a>
             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                 <li><a class="dropdown-item" href="#">Exercice 1</a></li>
-                <li><a class="dropdown-item" href="#">Exercice 2</a></li>
+                <li><a class="dropdown-item" href="<?= $URL_base ?>/serie2/exercice2.php">Exercice 2</a></li>
                 <li><a class="dropdown-item" href="#">Exercice 3</a></li>
                 <li><a class="dropdown-item" href="#">Exercice 4</a></li>
             </ul>
