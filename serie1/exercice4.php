@@ -30,27 +30,44 @@
             </div>
         </div>
         <br>
-        <h3>Jeu du démineur</h3>
-<?php
+        <div class="card text-center">
+          <div class="card-header">
+            Jeu du démineur
+          </div>
+          <div class="card-body">
+            <p class="card-text">
+            <?php
         $nbLigne = 15;
         $nbColonne = 50;
+        $nbCases = $nbLigne*$nbColonne;
         $nbMine = 5;
-        $mat = array();
-        
-        for($i = 0;$i <= $nbMine;$i++)
-        {
-            $nbRandomLigne = random_int(0,$nbLigne);
-            $nbRandomColonne = random_int(0,$nbColonne);
-        }
-        
 
-        for($ligne = 0;$ligne < $nbLigne;$ligne++)
+        $mines = array();
+        for($i = 1;$i <= $nbMine;$i++)
+        {
+          array_push($mines, random_int(0,$nbCases));
+        }
+        print_r($mines);
+        echo("<br>");
+        $nbRandomLigne = random_int(0,$nbLigne);
+        $nbRandomColonne = random_int(0,$nbColonne);
+
+        for($j = 0; $j <= $nbCases; $j++){
+          if(in_array($j, $mines)){
+            echo("*");
+          } else {
+            echo(".");
+          }
+        }
+        //for()
+        //in_array($j, $mines);
+        /*for($ligne = 0;$ligne < $nbLigne;$ligne++)
         {
             for($colonne = 0;$colonne < $nbColonne;$colonne++)
             {
                 if($colonne == $nbRandomColonne AND $ligne == $nbRandomLigne)
                 {
-                    echo " * ";
+                    echo " <b>*</b> ";
                 }
                 else
                 {
@@ -58,8 +75,12 @@
                 }
             }
             echo "<br>";
-        }
+        }*/
 ?>  
+            </p>
+          </div>
+        </div>
+
 
     </div>
 
