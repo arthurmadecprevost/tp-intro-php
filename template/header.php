@@ -23,6 +23,7 @@
                 </ul>
             </li>
             <li class="nav-item dropdown">
+<<<<<<< HEAD
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Série 2
                 </a>
@@ -54,6 +55,17 @@
                     <li><a class="dropdown-item" href="<?= $URL_base ?>/serie4/exercice3.php">Exercice 3</a></li>
                     <li><a class="dropdown-item" href="<?= $URL_base ?>/serie4/exercice4.php">Exercice 4</a></li>
                 </ul>
+=======
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Série 2
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                <li><a class="dropdown-item" href="<?= $URL_base ?>/serie2/exercice1.php">Exercice 1</a></li>
+                <li><a class="dropdown-item" href="#">Exercice 2</a></li>
+                <li><a class="dropdown-item" href="#">Exercice 3</a></li>
+                <li><a class="dropdown-item" href="#">Exercice 4</a></li>
+            </ul>
+>>>>>>> e09e8f95ed3f03b0a7cbfc5eb130d7fd95145ff1
             </li>
         </ul>
         </div>
