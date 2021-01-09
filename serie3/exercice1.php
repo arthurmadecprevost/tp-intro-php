@@ -31,53 +31,66 @@
             </div>
         </div> 
 <?php
-        $borneInf = 1;
-        $borneSup = 100;
         $trouve = false;
-        if(!isset($_SESSION['nombre_mystere']) AND !isset($_SESSION['nbEssai'])) // Vérifie si la session n'existe pas
+        $fin = false;
+        if(!isset($_SESSION['nombre_mystere'])) // Vérifie si la session n'existe pas
         {      
-            $_SESSION['nbEssai'] = 10;
-            $_SESSION['nombre_mystere'] = random_int($borneInf,$borneSup); // Si elle n'existe pas, on la crée et on lui donne comme valeur un nombre au hasard.
+            $_SESSION['nbEssai'] = 0;
+            $_SESSION['borneInf'] = 1;
+            $_SESSION['borneSup'] = 100;
+            $_SESSION['nombre_mystere'] = random_int($_SESSION['borneInf'],$_SESSION['borneSup']); // Si elle n'existe pas, on la crée et on lui donne comme valeur un nombre au hasard.
         }
-        if($_SESSION['nbEssai'] != 0)
-        {   
-?>
-        <br>
-        <form action="" method="post">
-            <p>Quelle est ta proposition ? <input type="text" name="num" /></p>
-            <input type="hidden" name="nbTentatives" value="<?php echo $_SESSION['nbEssai']; ?>" />
-            <p><input type="submit" name="deviner" value="Deviner"></p>
-        </form>    
-<?php
-        }
-        if(isset($_POST['num']))
-        {    
-            $nbEssai = (!empty($_POST["nbEssai"])) ? (int) $_POST["nbEssai"] : 10;
-            $nbEssai--;
+        else if(!empty($_POST['num']))
+        {
             $num = $_POST['num'];
-            echo "Il vous reste " . $_SESSION['nbEssai'] . " essais. <br>";
-            echo $_SESSION['nombre_mystere'];
             if($num > $_SESSION['nombre_mystere'])
             {
-                $borneSup = $num;
-                echo "C'est plus petit, essayez entre " . $borneInf . " et " . $borneSup ."<br>";  
+                $_SESSION['borneSup'] = $num;
+                echo "C'est plus petit, essayez entre " . $_SESSION['borneInf'] . " et " . $_SESSION['borneSup'] ."<br>";  
             }
             else if($num < $_SESSION['nombre_mystere'])
             {
-                $borneInf = $num; 
-                echo "C'est plus grand, essayez entre " . $borneInf . " et " . $borneSup ."<br>";
+                $_SESSION['borneInf'] = $num; 
+                echo "C'est plus grand, essayez entre " . $_SESSION['borneInf'] . " et " . $_SESSION['borneSup'] ."<br>";
+            }
+            else if($_SESSION['nbEssai'] >= 10)
+            {
+                $fin = true;
             }
             else
             {
-                echo "Vous avez gagné en " . $_SESSION['nbEssai'] . " essais.<br>";
-                $_SESSION['nbEssai'] = 0; 
                 $trouve = true;
-                session_destroy();
+                $fin = true;
             } 
+            $_SESSION['nbEssai']++;
         }
-        if($_SESSION['nbEssai'] = 0 AND !$trouve)
+        else
         {
-            echo "Vous avez perdu, le nombre était : " . $_SESSION['nombre_mystere'];
+            echo "Veuilez saisir une valeur valide <br>";
+        }   
+        if(!$fin)
+        {
+            $nbEssai = 10 - $_SESSION['nbEssai'];
+            echo "Il vous reste " . $nbEssai . " essais. <br>";
+?>
+            <br>
+            <form action="" method="post">
+                <p>Quelle est ta proposition ? <input id="number" type="number" min="1" max="100" required></p>
+                <input type="hidden" name="nbTentatives" value="<?php echo $_SESSION['nbEssai']; ?>" />
+                <p><input type="submit" name="deviner" value="Deviner"></p>
+            </form>    
+<?php
+        }
+        else
+        {
+            if($trouve)
+            {
+                echo "Vous avez gagné en " . $_SESSION['nbEssai'] . " essais.<br>";
+            }
+            else
+            {
+                echo "Vous avez perdu, le nombre était : " . $_SESSION['nombre_mystere'];
+            }
             session_destroy();
         }
 ?>
