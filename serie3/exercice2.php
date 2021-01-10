@@ -1,4 +1,22 @@
 <?php
+  if(isset($_POST['search'])) {
+    switch($_POST['site']) {
+      case 'french':
+            header('location: http://amazon.fr/');
+      exit;
+
+      case 'com':
+            header('location: http://amazon.com/');
+      exit;
+
+      case 'uk':
+            header('location: http://amazon.co.uk');
+      exit;
+      default:
+            header('location: serie_3_exo_2.php');
+      exit;
+    }
+  }
   $serie = '3';
   $exercice = '2';
 ?>
@@ -39,27 +57,7 @@
                 <option value="uk">amazon.co.uk</option>
             </select>
             <p><input type="submit" name="search" value="Visiter le magasin"></p>
-        </form>      
-<?php
-        if(isset($_POST['search'])) {
-            switch($_POST['site']) {
-            case 'french':
-                    header('location: http://amazon.fr/');
-            exit;
-
-            case 'com':
-                    header('location: http://amazon.com/');
-            exit;
-
-            case 'uk':
-                    header('location: http://amazon.co.uk');
-            exit;
-            default:
-                    header('location: serie_3_exo_2.php');
-            exit;
-            }
-        }
-?>
+        </form>          
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
