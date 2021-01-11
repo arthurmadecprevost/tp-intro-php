@@ -39,19 +39,33 @@ $livre->price = 8.95;
 
 $livre2 = new Document();
 $livre2->idDoc = 2;
-$livre2->category = "reference";
-$livre2->author = "Nigel Rees";
-$livre2->title = "Sayings of the Century";
-$livre2->price = 8.95;
+$livre2->category = "roman";
+$livre2->author = "Harlan Cobben";
+$livre2->title = "Dans les bois";
+$livre2->price = 9;
 
 $listeDoc = new DocumentStore();
 $listeDoc->addDocument($livre);
 $listeDoc->addDocument($livre2);
 foreach($listeDoc->lesLivres as $doc)
 {
-    print_r($doc->getContent());
+    echo tableau($doc->getContent());
 }
-
+function tableau($array){
+    $idDoc = $array['idDoc'];
+    $category = $array['Category'];
+    $author = $array['Author'];
+    $title = $array['Title'];
+    $price = $array['Price'];
+    return ("
+    <p>Document n°$idDoc</p>
+    <ul class=\"list-group\">
+        <li class=\"list-group-item\">Categorie : $category</li>
+        <li class=\"list-group-item\">Auteur : $author</li>
+        <li class=\"list-group-item\">Titre : $title</li>
+        <li class=\"list-group-item\">Prix : $price €</li>
+    </ul>");
+}
 class Document
 {
     public $idDoc,$category,$author,$title,$price;
@@ -62,7 +76,8 @@ class Document
     }
     function getContent()
     {
-        return array("Category" => $this->category, 
+        return array("idDoc" => $this->idDoc,
+                    "Category" => $this->category, 
                     "Author" => $this->author,
                     "Title" => $this->title, 
                     "Price" => $this->price);
