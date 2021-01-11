@@ -11,7 +11,8 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    
     <title>TP Introduction au PHP</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="<?= $URL_base ?>/favicon_io/apple-touch-icon.png">
@@ -68,7 +69,7 @@
                     Série 4
                 </a>
                 <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                    <li><a class="dropdown-item" href="<?= $URL_base ?>/serie4/exercice1.php">Exercice 1</a></li>
+                    <li><a class="dropdown-item" href="<?= $URL_base ?>/serie4/lister.php">Consultation</a></li>
                     <li><a class="dropdown-item" href="<?= $URL_base ?>/serie4/exercice2.php">Exercice 2</a></li>
                     <li><a class="dropdown-item" href="<?= $URL_base ?>/serie4/exercice3.php">Exercice 3</a></li>
                     <li><a class="dropdown-item" href="<?= $URL_base ?>/serie4/exercice4.php">Exercice 4</a></li>
