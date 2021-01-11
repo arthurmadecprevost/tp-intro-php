@@ -3,6 +3,25 @@
     //$URL_base = "http://localhost";
 
 ?>    
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <title>TP Introduction au PHP</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="<?= $URL_base ?>/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?= $URL_base ?>/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?= $URL_base ?>/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="<?= $URL_base ?>/favicon_io/site.webmanifest">
+  </head>
+  <body>
+
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="<?= $URL_base ?>">TP Introduction au PHP</a>
