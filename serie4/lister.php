@@ -16,10 +16,9 @@
             <div class="col-sm">
             </div>
         </div>
-        <button type="button" class="btn btn-success">
+        <a class="btn btn-success" href="ajouter.php" role="button">
         <i class="bi bi-person-plus-fill"></i>
-                Ajouter un utilisateur
-              </button>
+                Ajouter un utilisateur</a>
 
 <table class="table table-striped">
       <thead>
