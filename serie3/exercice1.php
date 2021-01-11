@@ -75,7 +75,7 @@
 ?>
             <br>
             <form action="" method="post">
-                <label>Quelle est ta proposition ? </label><input id="number" type="number" min="1" max="100" required>
+                <label>Quelle est ta proposition ? </label><input id="number" type="number" name="num" min="1" max="100" required>
                 <input type="hidden" name="nbTentatives" value="<?php echo $_SESSION['nbEssai']; ?>" />
                 <p><input type="submit" name="deviner" value="Deviner"></p>
             </form>    
