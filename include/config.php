@@ -1,8 +1,10 @@
 <?php
 
     $host="127.0.0.1";
-    $user="tp-intro-php";
-    $password="tpintrophp";
+    //$user="tp-intro-php";
+    $user="root";
+    //$password="tpintrophp";
+    $password="";
     $database="tp-intro-php";
 
     try {
