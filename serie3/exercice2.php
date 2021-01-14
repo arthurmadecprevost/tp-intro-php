@@ -1,7 +1,8 @@
 <?php
-  if(isset($_POST['search'])) {
-    switch($_POST['site']) {
-      
+  if (isset($_POST['search'])) 
+  {
+    switch($_POST['site']) 
+    {   
       case '#':
         header('location: #');
       exit;
@@ -82,8 +83,7 @@
   $serie = '3';
   $exercice = '2';
   include('../template/header.php');
-?>
-    
+?>  
     <div class="container">
         <div class="row">
             <div class="col-sm">

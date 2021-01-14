@@ -18,27 +18,27 @@
 <?php
         $trouve = false;
         $fin = false;
-        if(!isset($_SESSION['nombre_mystere'])) // Vérifie si la session n'existe pas
+        if (!isset($_SESSION['nombre_mystere'])) // Vérifie si la session n'existe pas
         {      
             $_SESSION['nbEssai'] = 0;
             $_SESSION['borneInf'] = 1;
             $_SESSION['borneSup'] = 100;
             $_SESSION['nombre_mystere'] = random_int($_SESSION['borneInf'],$_SESSION['borneSup']); // Si elle n'existe pas, on la crée et on lui donne comme valeur un nombre au hasard.
         }
-        else if(!empty($_POST['num']))
+        elseif (!empty($_POST['num']))
         {
             $num = $_POST['num'];
-            if($num > $_SESSION['nombre_mystere'])
+            if ($num > $_SESSION['nombre_mystere'])
             {
                 $_SESSION['borneSup'] = $num;
                 echo "C'est plus petit, essayez entre " . $_SESSION['borneInf'] . " et " . $_SESSION['borneSup'] ."<br>";  
             }
-            else if($num < $_SESSION['nombre_mystere'])
+            elseif ($num < $_SESSION['nombre_mystere'])
             {
                 $_SESSION['borneInf'] = $num; 
                 echo "C'est plus grand, essayez entre " . $_SESSION['borneInf'] . " et " . $_SESSION['borneSup'] ."<br>";
             }
-            else if($_SESSION['nbEssai'] >= 10)
+            elseif ($_SESSION['nbEssai'] >= 10)
             {
                 $fin = true;
             }
@@ -53,7 +53,7 @@
         {
             echo "Veuilez saisir une valeur valide <br>";
         }   
-        if(!$fin)
+        if (!$fin)
         {
             $nbEssai = 10 - $_SESSION['nbEssai'];
             echo "Il vous reste " . $nbEssai . " essais. <br>";
@@ -64,11 +64,11 @@
                 <input type="hidden" name="nbTentatives" value="<?php echo $_SESSION['nbEssai']; ?>" />
                 <p><input type="submit" name="deviner" value="Deviner"></p>
             </form>    
-    <?php
+<?php
         }
         else
         {
-            if($trouve)
+            if ($trouve)
             {
                 echo "Vous avez gagné en " . $_SESSION['nbEssai'] . " essais.<br>";
             }
@@ -78,7 +78,7 @@
             }
             session_destroy();
         }
-    ?>
+?>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>

@@ -1,7 +1,7 @@
 <?php
   $serie = '1';
   $exercice = '1';
-  include('../template/header.php');
+  include('../template/header.php');//On inclue l'en-tête avec le menu
 ?>
     
     <div class="container">
@@ -25,30 +25,32 @@
             </thead>
             <tbody>
 <?php     
-          for($i = 1;$i < 11;$i++)
-          {
-              if($i % 2 == 0)
-              {
-                  $pair_impair = 'pair';
-              }
-              else
-              {
-                  $pair_impair = 'impair';
-              }
-              $nbDiv = 0;//Et on compte le nombre de diviseur    
-              for($j=1;$j<=$i;$j++){
-                  if($i%$j==0){
-                      $nbDiv++;            
-                  }
-              }
-              if($nbDiv == 2)
-              {
-                  $premier = 'Oui';
-              }   
-              else
-              {
-                  $premier = 'Non';
-              }
+        for($i = 1;$i < 11;$i++)//Pour i allant de 1 à 10
+        {
+            if($i % 2 == 0)//Si le reste de la division i/2 == 0 alors c'est un chiffre paire sinon il est impair
+            {
+                $pair_impair = 'pair';
+            }
+            else
+            {
+                $pair_impair = 'impair';
+            }
+            $nbDiv = 0;//Et on compte le nombre de diviseur    
+            for ($j = 1;$j <= $i;$j++)//Pour j allant de 1 à i
+            {
+                if ($i % $j == 0)//On test si i est divisible 
+                {
+                    $nbDiv++;//On compte le nb de diviseur            
+                }
+            }
+            if ($nbDiv == 2)//Si le nb de diviseur est égal à 2, alors c'est un nombre premier
+            {
+                $premier = 'Oui';
+            }   
+            else
+            {
+                $premier = 'Non';
+            }
 ?>             
                 <tr>
                     <td><?= $i ?></td>
