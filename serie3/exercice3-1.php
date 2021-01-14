@@ -1,6 +1,6 @@
 <?php
   $serie = '3';
-  $exercice = '3';  
+  $exercice = "3-1";  
   include('../template/header.php');
 ?>
     
@@ -49,12 +49,24 @@
             </tr> 
             <tr>
                 <th>Souhaitez-vous recevoir notre newsletter ?</th>
+<?php
+            if(!empty($_POST['newsletter']))
+            {
+?>
                 <td><?= $_POST['newsletter'] ?></td>
+<?php       
+            } 
+            else
+            {
+?>
+                <td>no</td>
             </tr>
+
+<?php       } ?>
             <tr>
                 <th>Commentaires</th>
 <?php
-        if(!empty($_POST['coments']))
+        if(!empty($_POST['comments']))
         {
 ?>
                 <td><?= $_POST['comments'] ?></td>
@@ -121,7 +133,7 @@
                 <div class="col-sm-2">Souhaitez-vous recevoir notre newsletter ?</div>
                 <div class="col-sm-10">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="newsletter" id="gridCheck1" required>
+                        <input class="form-check-input" type="checkbox" value="yes" name="newsletter" id="gridCheck1">
                     </div>
                 </div>
             </div>

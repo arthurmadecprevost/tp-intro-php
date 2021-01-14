@@ -60,7 +60,9 @@
                 <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                     <li><a class="dropdown-item" href="<?= $URL_base ?>/serie3/exercice1.php">Exercice 1</a></li>
                     <li><a class="dropdown-item" href="<?= $URL_base ?>/serie3/exercice2.php">Exercice 2</a></li>
-                    <li><a class="dropdown-item" href="<?= $URL_base ?>/serie3/exercice3.php">Exercice 3</a></li>
+                    <li><a class="dropdown-item" href="<?= $URL_base ?>/serie3/exercice3-1.php">Exercice 3-1</a></li>
+                    <li><a class="dropdown-item" href="<?= $URL_base ?>/serie3/exercice3-2.php">Exercice 3-2</a></li>
+                    <li><a class="dropdown-item" href="<?= $URL_base ?>/serie3/exercice3-3.php?etape=1">Exercice 3-3</a></li>
                     <li><a class="dropdown-item" href="<?= $URL_base ?>/serie3/exercice4.php">Exercice 4</a></li>
                 </ul>
             </li>
