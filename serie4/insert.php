@@ -17,11 +17,13 @@
         // vérifier si la requête d'insertion a réussi
         if($exec) 
         {
-            echo "<meta http-equiv=\"refresh\" content=\"0;url=$URL_base/serie4/lister.php\">";
+            echo "<meta http-equiv=\"refresh\" content=\"0;url=lister.php\">";
         } 
         else 
         {
-            echo "Échec de l'opération d'insertion";
+            echo "<div class=\"alert alert-danger\" role=\"alert\">
+            Échec de l'opération d'insertion
+          </div>";
         }       
     }
 ?>
