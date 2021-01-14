@@ -2,6 +2,8 @@
   $serie = '2';
   $exercice = '3';
   include('../template/header.php');
+  require('calculator.php');
+  require('calcAdvenced.php');
 ?>
     
     <div class="container">
@@ -14,46 +16,17 @@
             <div class="col-sm">
             </div>
         </div>
-
 <?php
-$calc = new Calculator();
-$calc->nbr1 = 3;
-$calc->nbr2 = 4;
-echo "$calc->nbr1 + $calc->nbr2 = ". $calc->add() ." <br>";
-echo "$calc->nbr1 - $calc->nbr2 = ". $calc->sub() ." <br>";
-echo "$calc->nbr1 * $calc->nbr2 = ". $calc->multiply() ." <br>";
-$calcAdvenced = new CalcAdvenced();
-$calcAdvenced->nbr1 = 3;
-echo "$calcAdvenced->nbr1 = ". $calcAdvenced->racine_carre() ." <br>";
-echo "$calcAdvenced->nbr1 = ". $calcAdvenced->exponentiel() ." <br>";
-class Calculator
-{
-    public $nbr1,$nbr2;
-
-    function add()
-    {
-        return $this->nbr1 + $this->nbr2;
-    }
-    function sub()
-    {
-        return $this->nbr1 - $this->nbr2;
-    }
-    function multiply()
-    {
-        return $this->nbr1 * $this->nbr2;
-    }
-}    
-class CalcAdvenced extends Calculator
-{
-    function racine_carre()
-    {
-        return sqrt($this->nbr1);
-    }
-    function exponentiel()
-    {
-        return exp($this->nbr1);
-    }
-}
+    $calc = new Calculator();
+    $calc->nbr1 = 3;
+    $calc->nbr2 = 4;
+    echo "$calc->nbr1 + $calc->nbr2 = ". $calc->add() ." <br>";
+    echo "$calc->nbr1 - $calc->nbr2 = ". $calc->sub() ." <br>";
+    echo "$calc->nbr1 * $calc->nbr2 = ". $calc->multiply() ." <br>";
+    $calcAdvenced = new CalcAdvenced();
+    $calcAdvenced->nbr1 = 3;
+    echo "&#x221A;" . $calcAdvenced->nbr1 . " = ". $calcAdvenced->racine_carre() ." <br>";
+    echo "&#x2147;^" . $calcAdvenced->nbr1 . " = ". $calcAdvenced->exponentiel() ." <br>";
 ?>
     </div>
 
