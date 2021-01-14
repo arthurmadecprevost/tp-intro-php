@@ -146,7 +146,7 @@
 <?php
         if(!empty($_POST['newsletter']))
         {
-            echo "<td>." . $_POST['newsletter'] . "</td> 
+            echo "<td>" . $_POST['newsletter'] . "</td> 
             </tr>";  
         } 
         else

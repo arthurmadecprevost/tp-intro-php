@@ -1,5 +1,4 @@
 <?php
-  session_start();
   $serie = '3';
   $exercice = '3-2';  
   include('../template/header.php');
@@ -45,16 +44,13 @@
         }
         elseif ($_GET['etape'] == 2)
         {
-            if (!isset($_SESSION['first_name'])) 
-            {
-                $_SESSION['first_name'] = $_POST['first_name'];
-                $_SESSION['last_name'] = $_POST['last_name'];
-                $_SESSION['password'] = $_POST['password'];
-                $_SESSION['confirm_password'] = $_POST['confirm_password'];
-            }
 ?>
         <h3>Inscription : Etape 2</h3><br>
         <form action="exercice3-3.php?etape=3" method="post">
+            <input name="first_name" type="hidden" value="<?= $_POST['first_name']; ?>">
+            <input name="last_name" type="hidden" value="<?= $_POST['last_name']; ?>">
+            <input name="password" type="hidden" value="<?= $_POST['password']; ?>">
+            <input name="confirm_password" type="hidden" value="<?= $_POST['confirm_password']; ?>">
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="genre" id="inlineRadio1" value="homme" required> 
                 <label class="form-check-label" for="inlineRadio1">Homme</label>
@@ -83,14 +79,15 @@
         }
         elseif ($_GET['etape'] == 3)
         {
-            if (!isset($_SESSION_['genre'])) 
-            {
-                $_SESSION['genre'] = $_POST['genre'];
-                $_SESSION['language'] = $_POST['language'];
-            }    
 ?>
         <h3>Inscription : Etape 3</h3><br>
         <form action="exercice3-3.php?etape=fini" method="post">
+            <input name="first_name" type="hidden" value="<?= $_POST['first_name']; ?>">
+            <input name="last_name" type="hidden" value="<?= $_POST['last_name']; ?>">
+            <input name="password" type="hidden" value="<?= $_POST['password']; ?>">
+            <input name="confirm_password" type="hidden" value="<?= $_POST['confirm_password']; ?>">
+            <input name="genre" type="hidden" value="<?= $_POST['genre']; ?>">
+            <input name="language" type="hidden" value="<?= $_POST['language']; ?>">
             <div class="form-group row">
                 <label class="col-sm-2">Souhaitez-vous recevoir notre newsletter ?</label>
                 <div class="col-sm-10">
@@ -119,34 +116,34 @@
         <tbody>
             <tr>
                 <th>Prénom</th>
-                <td><?= $_SESSION['first_name'] ?></td>
+                <td><?= $_POST['first_name'] ?></td>
             </tr> 
             <tr>
                 <th>Nom</th>
-                <td><?= $_SESSION['last_name'] ?></td>
+                <td><?= $_POST['last_name'] ?></td>
             </tr> 
             <tr>
                 <th>Mot de passe</th>
-                <td><?= $_SESSION['password'] ?></td>
+                <td><?= $_POST['password'] ?></td>
             </tr> 
             <tr>
                 <th>Confirmation mot de passe</th>
-                <td><?= $_SESSION['confirm_password'] ?></td>
+                <td><?= $_POST['confirm_password'] ?></td>
             </tr> 
             <tr>
                 <th>Genre</th>
-                <td><?= $_SESSION['genre'] ?></td>
+                <td><?= $_POST['genre'] ?></td>
             </tr> 
             <tr>
                 <th>Langage favori</th>
-                <td><?= $_SESSION['language'] ?></td>
+                <td><?= $_POST['language'] ?></td>
             </tr> 
             <tr>
                 <th>Souhaitez-vous recevoir notre newsletter ?</th>
 <?php
         if(!empty($_POST['newsletter']))
         {
-            echo "<td>." . $_POST['newsletter'] . "</td> 
+            echo "<td>" . $_POST['newsletter'] . "</td> 
             </tr>";  
         } 
         else
@@ -170,7 +167,6 @@
                 <td>No comments</td>
             </tr>";
         } 
-        session_destroy();
 ?>
         </tbody>
     </table>
