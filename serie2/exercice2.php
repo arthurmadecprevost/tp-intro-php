@@ -26,7 +26,7 @@
 <?php           
         function factoriel($nbr) 
         {   
-            if($nbr === 0)// condition d'arret 
+            if ($nbr === 0)// condition d'arret 
             {
                 $nbr = 1; 
             }
@@ -36,9 +36,9 @@
             }
             return $nbr;
         } 
-        for($i = 0;$i < 11;$i++)
+        for ($i = 0;$i < 11;$i++)
         {
-?>                        
+?>                      
                 <tr>
                     <td><?= $i ?></td>
                     <td><?= factoriel($i) ?></td>

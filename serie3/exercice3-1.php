@@ -50,39 +50,35 @@
             <tr>
                 <th>Souhaitez-vous recevoir notre newsletter ?</th>
 <?php
-            if(!empty($_POST['newsletter']))
-            {
-?>
-                <td><?= $_POST['newsletter'] ?></td>
-<?php       
-            } 
-            else
-            {
-?>
-                <td>no</td>
-            </tr>
-
-<?php       } ?>
-            <tr>
-                <th>Commentaires</th>
-<?php
-        if(!empty($_POST['comments']))
+        if(!empty($_POST['newsletter']))
         {
-?>
-                <td><?= $_POST['comments'] ?></td>
-            </tr> 
-<?php   } 
+            echo "<td>" . $_POST['newsletter'] . "</td> 
+            </tr>";  
+        } 
         else
         {
-?>
+            echo "
+                <td>no</td>
+            </tr>";
+        } 
+            echo "
+            <tr>
+                <th>Commentaires</th>";
+        if (!empty($_POST['comments']))
+        {
+            echo "
+                <td>" . $_POST['comments'] . "</td>
+            </tr>";   
+        } 
+        else
+        {
+            echo "
                 <td>No comments</td>
-            </tr>
-
-<?php   } ?>
-
+            </tr>";
+        } 
+?>
         </tbody>
     </table>
-
 <?php  
     }
     else

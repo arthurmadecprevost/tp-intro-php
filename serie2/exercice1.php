@@ -25,7 +25,8 @@
         </tr>
       </thead>
       <?php
-          function tableau($array){
+          function tableau($array)
+          {
               $title = $array[0];
               $author = $array[1];
               $pubAnnee = $array[2];

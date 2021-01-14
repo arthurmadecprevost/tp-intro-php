@@ -47,11 +47,12 @@
       </thead>
       <tbody>
       <?php 
-        for ($i = 0; $i <= 5; $i++) {
+        for ($i = 0; $i <= 5; $i++) 
+        {
           echo "<tr>
-        <th scope=\"row\">{$i}</th>
-        <td>{$auteurs[$i]}</td>
-        </tr>";
+          <th scope=\"row\">{$i}</th>
+          <td>{$auteurs[$i]}</td>
+          </tr>";
         }
       ?>
       </tbody>
@@ -72,13 +73,14 @@
       </thead>
       <tbody>
       <?php 
-        for ($i = 1; $i <= 6; $i++) {
+        for ($i = 1; $i <= 6; $i++) 
+        {
           echo "<tr>
-        <th scope=\"row\">{$i}</th>
-        <td>{$livres[$i]["titre"]}</td>
-        <td>{$auteurs[$livres[$i]["auteurId"]]}</td>
-        <td>{$livres[$i]["pubAnnee"]}</td>
-        </tr>";
+          <th scope=\"row\">{$i}</th>
+          <td>{$livres[$i]["titre"]}</td>
+          <td>{$auteurs[$livres[$i]["auteurId"]]}</td>
+          <td>{$livres[$i]["pubAnnee"]}</td>
+          </tr>";
         }
       ?>
       </tbody>
