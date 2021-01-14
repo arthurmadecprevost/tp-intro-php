@@ -67,15 +67,9 @@
                 </ul>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link" href="<?= $URL_base ?>/serie4/lister.php" role="button" aria-expanded="false">
                     Série 4
                 </a>
-                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                    <li><a class="dropdown-item" href="<?= $URL_base ?>/serie4/lister.php">Consultation</a></li>
-                    <li><a class="dropdown-item" href="<?= $URL_base ?>/serie4/exercice2.php">Exercice 2</a></li>
-                    <li><a class="dropdown-item" href="<?= $URL_base ?>/serie4/exercice3.php">Exercice 3</a></li>
-                    <li><a class="dropdown-item" href="<?= $URL_base ?>/serie4/exercice4.php">Exercice 4</a></li>
-                </ul>
             </li>
         </ul>
         </div>
