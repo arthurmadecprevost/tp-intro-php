@@ -15,6 +15,14 @@
             </div>
             <div class="col-sm">
             </div>
+            <form action="insert.php" method="post">
+              <p>Nom<input type="text" name="LastName"></p>
+              <p>Prénom<input type="text" name="FirstName"></p>
+              <p>Email<input type="text" name="Email"></p>
+              <p>Numéro de téléphone<input type="text" name="ContactNumber"></p>
+              <p>Adresse<input type="text" name="Address"></p>
+              <p><input type="submit" name="insert" value="Insérer"></p>
+            </form>
         </div>
         
     </div>
