@@ -65,13 +65,12 @@
                     <td>$contact</td>
                     <td>$adresse</td>
                     <td>$dateInscription</td>
-                    <td><button type=\"button\" class=\"btn btn-primary\">
+                    <td><a type=\"button\" href=\"update.php?id=$id\" class=\"btn btn-primary\">
                     <i class=\"bi bi-pencil-fill\"></i>
-                  </button></td>
-                    <td><button type=\"button\" class=\"btn btn-danger\">
+                  </a></td>
+                    <td><a type=\"button\" href=\"delete.php?id=$id\" class=\"btn btn-danger\">
                     <i class=\"bi bi-trash-fill\"></i>
-                    <span class=\"visually-hidden\">Button</span>
-                  </button></td>
+                  </a></td>
                   </tr>");
                 //print_r($row);
                 }
@@ -85,6 +84,7 @@
   </tbody>
 
   </table>
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 
